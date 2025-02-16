@@ -49,5 +49,4 @@ Link Tableau : https://public.tableau.com/views/HR_17397294988500/Dashboard1?:la
 Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
 1. Meningkatkan kesejahteraan karyawan dengan kebijakan gaji yang lebih kompetitif untuk mengurangi tingkat attrition pada karyawan dengan gaji tinggi.
 2. Mengembangkan program keterlibatan karyawan guna meningkatkan kepuasan kerja dan menurunkan tingkat keluar.
-3. Menggunakan model machine learning yang lebih akurat dengan teknik balancing data seperti SMOTE agar lebih efektif dalam mendeteksi karyawan yang berisiko keluar.
-4. Menggunakan dashboard secara rutin untuk memonitor perkembangan attrition dan mengambil tindakan preventif lebih awal.
+3. Menggunakan dashboard secara rutin untuk memonitor perkembangan attrition dan mengambil tindakan preventif lebih awal.
