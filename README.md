@@ -22,12 +22,29 @@ Proyek ini mencakup seluruh tahap dalam data science lifecycle, mulai dari pemah
 
 ### Persiapan
 
-Sumber data: Dataset yang digunakan berisi informasi demografis, gaji, dan faktor-faktor lain terkait pekerjaan karyawan.
+Sumber data: Dataset yang digunakan berisi informasi demografis, gaji, dan faktor-faktor lain terkait pekerjaan karyawan. Data diambil dari link : https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee
 
-Setup environment:
-- Python (pandas, numpy, seaborn, matplotlib, scikit-learn, imbalanced-learn)
-- Google Colaboratory untuk eksplorasi data dan analisis
-- Tableau Public untuk business dashboard
+## Setup Environment  
+
+### 1. Install Dependencies (Library)
+Sebelum menjalankan proyek ini, pastikan Anda memiliki Python 3.9 atau lebih baru.
+
+## Setup Environment - Anaconda
+```
+conda create --name attrition-analysis python=3.9
+conda activate attrition-analysis
+pip install -r requirements.txt
+```
+## Setup Environment - Virtual environment biasa
+```
+python -m venv env
+source env/bin/activate  # Untuk Linux/macOS
+env\Scripts\activate  # Untuk Windows
+pip install -r requirements.txt
+```
+### 2. Jalankan Notebook
+Setelah environment terinstal, jalankan notebook dengan perintah: jupyter notebook
+Lalu buka file ProyekHRDataScience.ipynb dan jalankan semua sel untuk melihat hasil analisis
 
 ## Business Dashboard
 
@@ -39,14 +56,42 @@ Dashboard telah dibuat menggunakan Tableau Public untuk memvisualisasikan faktor
 Link Tableau : https://public.tableau.com/views/HR_17397294988500/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
 
 ## Conclusion
+Berdasarkan analisis data, berikut adalah temuan utama terkait **attrition rate** karyawan di perusahaan:  
+1. **Gaji Bulanan (Monthly Income) Berpengaruh Signifikan**  
+   - Karyawan dengan **gaji lebih rendah** cenderung bertahan lebih lama.  
+   - Sementara itu, **karyawan dengan gaji lebih tinggi justru memiliki kemungkinan lebih besar untuk keluar**.  
 
-1. Gaji bulanan memiliki pengaruh signifikan terhadap attrition. Hasil uji hipotesis menunjukkan bahwa karyawan dengan gaji lebih tinggi cenderung memiliki tingkat attrition yang lebih besar.
-2. Model prediksi memiliki akurasi 84%, tetapi recall untuk mendeteksi karyawan yang keluar masih rendah. Hal ini menunjukkan bahwa model perlu dioptimalkan agar lebih efektif dalam mendeteksi karyawan yang berisiko keluar.
-3. Business dashboard membantu HR dalam memonitor faktor-faktor yang mempengaruhi attrition dan memberikan wawasan untuk pengambilan keputusan.
+2. **Faktor Work-Life Balance dan Job Satisfaction**  
+   - **Karyawan dengan Work-Life Balance rendah** lebih cenderung melakukan attrition.  
+   - **Job Satisfaction yang rendah** juga meningkatkan kemungkinan keluar dari perusahaan.  
+
+3. **Business Travel dan OverTime**  
+   - Karyawan yang sering bepergian dinas (**Travel Frequently**) lebih banyak keluar dibanding yang jarang bepergian.  
+   - Karyawan yang **sering lembur (OverTime)** juga memiliki tingkat attrition yang lebih tinggi.
+
+4. **Karakteristik Umum Karyawan yang Keluar**  
+   - Lebih banyak ditemukan di **Departemen Sales** dan **Research & Development**.  
+   - Cenderung memiliki **pengalaman kerja lebih pendek** dan lebih banyak berpindah kerja (**NumCompaniesWorked lebih tinggi**).  
+   - Mayoritas berada di level pekerjaan **Junior (Job Level 1-2)**.  
    
 ### Rekomendasi Action Items
+Berdasarkan hasil analisis, berikut beberapa rekomendasi yang dapat diambil oleh perusahaan untuk **mengurangi tingkat attrition**:  
+1. **Menyesuaikan Skema Gaji dan Insentif**  
+   - Tinjau kembali skema gaji, terutama bagi karyawan dengan **pengalaman tinggi** agar mereka tidak mudah berpindah kerja.  
+   - Berikan bonus atau **insentif retensi** bagi karyawan yang telah bekerja lebih lama.  
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-1. Meningkatkan kesejahteraan karyawan dengan kebijakan gaji yang lebih kompetitif untuk mengurangi tingkat attrition pada karyawan dengan gaji tinggi.
-2. Mengembangkan program keterlibatan karyawan guna meningkatkan kepuasan kerja dan menurunkan tingkat keluar.
-3. Menggunakan dashboard secara rutin untuk memonitor perkembangan attrition dan mengambil tindakan preventif lebih awal.
+2. **Meningkatkan Work-Life Balance**  
+   - Mengurangi **lembur yang berlebihan** dengan kebijakan kerja yang lebih fleksibel.  
+   - Meningkatkan fasilitas dan program kesejahteraan untuk mendukung keseimbangan kerja-kehidupan.  
+
+3. **Membatasi Frekuensi Perjalanan Dinas**  
+   - Untuk karyawan yang sering bepergian (**Travel Frequently**), perusahaan dapat menawarkan **opsi kerja jarak jauh atau rotasi tim** untuk mengurangi burnout.  
+
+4. **Meningkatkan Kepuasan Kerja (Job Satisfaction)**  
+   - Mengadakan **program pengembangan karir**, pelatihan, dan peluang promosi yang lebih transparan.  
+   - Melakukan **survey kepuasan kerja secara berkala** untuk memahami kebutuhan karyawan.  
+
+5. **Fokus pada Departemen dan Jabatan dengan Tingkat Attrition Tinggi**  
+   - Memberikan perhatian lebih pada **Departemen Sales dan Research & Development**, karena tingkat attrition mereka lebih tinggi.  
+   - Memperbaiki kebijakan pengelolaan karyawan baru dan junior agar mereka lebih termotivasi untuk bertahan.  
+
